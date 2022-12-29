@@ -1,4 +1,12 @@
-## NO.11719 그대로 출력하기 2 (BRONZE III)
+[Need] <br/>
+String vs StringBuffer, StringBuilder
+
+BufferReader vs BufferedWriter
+
+---
+
+
+## NO11719. 그대로 출력하기 2 (BRONZE III)
 
 입력은 최대 100줄로 이루어져 있고, 알파벳 대소문자, 공백, 숫자로 구성되어 있다.
 
@@ -8,14 +16,9 @@
 
 [시간제한] 1초
 
-[Need] <br/>
-String vs StringBuffer, StringBuilder
-
-BufferReader vs BufferedWriter
-
 ---
 
-## NO.15552 빠른 A+B (BRONZE IV)
+## NO15552. 빠른 A+B (BRONZE IV)
 
 이전에 풀어본 내역이 있었지만 시간 초과의 이유로 실패했었다.
 
@@ -28,3 +31,26 @@ BufferReader vs BufferedWriter
 ```
 1 <= A, B <= 1000
 ```
+
+---
+
+## NO10828. 스택 (SIVER IV)
+
+정수를 저장하는 스택을 구현하고 입력으로 주어지는 명령을 처리하는 프로그램을 작성하시오.
+
+```
+push X: 정수 X를 스택에 넣는 연산, 반환 타입 `void`
+pop: 스택에서 가장 위에 있는 정수를 빼고, 그 수를 출력한다. 만약, 스택이 비었다면 -1을 출력
+size: 스택에 들어있는 정수의 개수를 출력
+empty: 스택이 비어있으면 1, 아니면 0을 출력
+top: 스택의 가장 위에 있는 정수를 출력한다. 만약 스택이 비었다면 -1을 출력
+```
+
+[입력] <br/>
+첫째 줄에 주어지는 명령의 수는 1 <= N <= 10,000이 주어진다.<br/>
+둘째 줄부터 N개의 줄에는 명령이 하나씩 주어진다.<br/>
+주어진 정수는 1보다 크거나 같고, 100,00보다 작거나 같다.
+
+`Scanner`로 풀 경우 시간 초과 발생으로 실패해서 `BufferReader`로 변경하여 `Passed`됨
+
+`Need`에 적어둔 것처럼 `BufferReader`와 `BufferWrtier`를 알아보고 동작 원리를 알 필요성이 있음
