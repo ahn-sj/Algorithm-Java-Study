@@ -32,6 +32,22 @@ BufferReader vs BufferedWriter
 1 <= A, B <= 1000
 ```
 
+BufferedWriter에 정수형을 넣고 싶은 경우 String으로 변환이 필요하다.
+
+```
+for (int i = 0; i < loopCount; i++) {
+    String[] testCases = br.readLine().split(" ");
+
+    bw.write(Integer.valueOf(testCases[0]) + Integer.valueOf(testCases[1]));
+}
+```
+
+이걸 몰라서 위 코드로 실행한 경우 아래와 같이 엉뚱한 결과 값이 나왔었다.
+
+![image](https://user-images.githubusercontent.com/64416833/210049957-8560a706-0a78-4790-9b23-0cd85e1fe918.png)
+
+참고: https://dev-note-97.tistory.com/58
+
 ---
 
 ## NO10828. 스택 (SILVER IV)

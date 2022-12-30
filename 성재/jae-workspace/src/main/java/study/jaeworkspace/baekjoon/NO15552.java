@@ -15,7 +15,7 @@ public class NO15552 {
         for (int i = 0; i < loopCount; i++) {
             String[] testCases = br.readLine().split(" ");
 
-            bw.write(Integer.valueOf(testCases[0]) + Integer.valueOf(testCases[1]) + "\n");
+            bw.write(Integer.valueOf(testCases[0]) + Integer.valueOf(testCases[1]));
         }
         br.close();
 
