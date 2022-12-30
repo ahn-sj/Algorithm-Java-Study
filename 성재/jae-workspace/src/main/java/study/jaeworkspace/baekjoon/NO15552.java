@@ -10,14 +10,16 @@ public class NO15552 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        String str = "";
+        int loopCount = Integer.parseInt(br.readLine());
 
-        while ((str = br.readLine()) != null) {
-            String[] testCases = str.split(" ");
+        for (int i = 0; i < loopCount; i++) {
+            String[] testCases = br.readLine().split(" ");
 
-            int sum = Integer.valueOf(testCases[0]) + Integer.valueOf(testCases[1]);
-            bw.write(sum);
+            bw.write(Integer.valueOf(testCases[0]) + Integer.valueOf(testCases[1]) + "\n");
         }
+        br.close();
+
         bw.flush();
+        bw.close();
     }
 }
