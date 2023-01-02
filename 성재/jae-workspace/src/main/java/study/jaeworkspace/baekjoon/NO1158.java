@@ -1,52 +1,47 @@
 package study.jaeworkspace.baekjoon;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 /**
- * 요세푸드 문제
+ * 요세푸드 문제 (큐 활용)
+ *
+ * =======================================
+ * ========= 나중에 다시 풀어보기 ===========
+ * =======================================
+ *
  */
 public class NO1158 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        Queue<Integer> queue = new LinkedList();
 
         int peopleCount = scan.nextInt();
         int gap = scan.nextInt();
 
-        int[] removedPeopleOrder = new int[peopleCount];
-        List<Integer> peoples = new ArrayList<>();
+        int[] peoples = new int[peopleCount - 1];
+
+        addPeople(peopleCount, queue);
 
         int index = 0;
 
-        for (int i = 1; i <= peopleCount; i++) {
-//            peoples[i] = i;
-            peoples.add(i);
-        }
-
-        System.out.println(peoples);
-
-        int removeCount = 0;
-        int arrayIndex = 0;
-
-        while (peoples.size() != 0) {
-            arrayIndex = index + gap - 1;
-            if(arrayIndex > peoples.size()) {
-                arrayIndex = (arrayIndex) % peoples.size();
-
-                System.out.println(index);
+        while (queue.size() != 1) {
+            // gap - 1 까지 맨 뒤로 보내기
+            for (int i = 0; i < gap - 1; i++) {
+                queue.offer(queue.poll());
             }
-
-            removedPeopleOrder[removeCount] = peoples.remove(arrayIndex);
-            removeCount++;
-
-            index = arrayIndex;
-            System.out.println(peoples.size());
-            System.out.println("peoples = " + peoples);
-            System.out.println("removedPeopleOrder = " + Arrays.toString(removedPeopleOrder));
+            peoples[index++] = queue.poll();
         }
-        String array = Arrays.toString(removedPeopleOrder);
-        System.out.println("<" + array.substring(1, array.length()-1) + ">");
+
+        String arrayToStringPeople = Arrays.toString(peoples);
+        System.out.println("<" + arrayToStringPeople.substring(1, arrayToStringPeople.length() - 1) + ", " + queue.poll() + ">");
+    }
+
+    private static void addPeople(int peopleCount, Queue<Integer> queue) {
+        for (int i = 1; i <= peopleCount; i++) {
+            queue.offer(i);
+        }
     }
 }
