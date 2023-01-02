@@ -1,9 +1,7 @@
 package study.jaeworkspace.baekjoon;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
 /**
  * 요세푸드 문제 (큐 활용)
@@ -14,29 +12,35 @@ import java.util.Scanner;
  *
  */
 public class NO1158 {
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
         Queue<Integer> queue = new LinkedList();
+        StringBuilder rst = new StringBuilder();
 
-        int peopleCount = scan.nextInt();
-        int gap = scan.nextInt();
-
-        int[] peoples = new int[peopleCount - 1];
+        int peopleCount = Integer.parseInt(st.nextToken());
+        int gap = Integer.parseInt(st.nextToken());
 
         addPeople(peopleCount, queue);
 
-        int index = 0;
-
+        rst.append("<");
         while (queue.size() != 1) {
             // gap - 1 까지 맨 뒤로 보내기
             for (int i = 0; i < gap - 1; i++) {
                 queue.offer(queue.poll());
             }
-            peoples[index++] = queue.poll();
+            rst.append(queue.poll() + ", ");
         }
+        rst.append(queue.poll() + ">");
 
-        String arrayToStringPeople = Arrays.toString(peoples);
-        System.out.println("<" + arrayToStringPeople.substring(1, arrayToStringPeople.length() - 1) + ", " + queue.poll() + ">");
+        bw.write(rst + "\n");
+        bw.flush();
+
+        bw.close();
+        br.close();
     }
 
     private static void addPeople(int peopleCount, Queue<Integer> queue) {
