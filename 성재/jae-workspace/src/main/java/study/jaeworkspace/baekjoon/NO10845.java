@@ -1,76 +1,71 @@
 package study.jaeworkspace.baekjoon;
 
-import java.util.Stack;
+import java.io.*;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
 
 /**
  * 큐
  */
 public class NO10845 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        CustomQueue queue = new CustomQueue();
+        Queue<String> queue = new LinkedList();
+        StringTokenizer st;
 
-        queue.push(1);
-        queue.push(2);
-        queue.push(3);
+        String last = "";
 
-        System.out.println(queue.pop());
-        System.out.println(queue.pop());
+        int loopCount = Integer.parseInt(br.readLine());
 
-        System.out.println(queue.empty());
+        for (int i = 0; i < loopCount; i++) {
+            st = new StringTokenizer(br.readLine(), " ");
 
-        System.out.println(queue.front());
-        System.out.println(queue.back());
+            switch (st.nextToken()) {
+                case "push":
+                    String pushElement = st.nextToken();
+                    last = pushElement;
+                    queue.offer(pushElement);
+                    break;
+                case "pop":
+                    if (hasElement(queue)) {
+                        bw.write(queue.poll() + "\n");
+                    } else {
+                        bw.write(-1 + "\n");
+                    }
+                    break;
+                case "size":
+                    bw.write(queue.size() + "\n");
+                    break;
+                case "empty":
+                    if(hasElement(queue)) {
+                        bw.write("0\n");
+                    } else {
+                        bw.write("1\n");
+                    }
+                    break;
+                case "front":
+                    if (hasElement(queue)) {
+                        bw.write(queue.peek() + "\n");
+                    } else {
+                        bw.write(-1 + "\n");
+                    }
+                    break;
+                case "back":
+                    if (hasElement(queue)) {
+                        bw.write(last + "\n");
+                    } else {
+                        bw.write(-1 + "\n");
+                    }
+                    break;
+            }
+            bw.flush();
+        }
     }
 
-    public static class CustomQueue {
-        Stack<Integer> newStack = new Stack();
-        Stack<Integer> oldStack = new Stack();
-
-        public void push(int element) {
-            newStack.push(element);
-        }
-
-        public int pop() {
-            fillOldStack();
-            return oldStack.pop();
-        }
-
-        public int size() {
-            fillOldStack();
-            return oldStack.size();
-        }
-
-        public int empty() {
-            fillOldStack();
-            return oldStack.empty() == true ? 1 : 0;
-        }
-
-        public int front() {
-            fillOldStack();
-
-            if(oldStack.empty()) return -1;
-
-            return oldStack.firstElement();
-        }
-
-        public int back() {
-            fillOldStack();
-
-            if(oldStack.empty()) return -1;
-            return oldStack.lastElement();
-        }
-
-
-        private void fillOldStack() {
-            while (hasElement()) {
-                Integer pop = newStack.pop();
-                oldStack.push(pop);
-            }
-        }
-
-        private boolean hasElement() {
-            return !newStack.empty();
-        }
+    private static boolean hasElement(Queue<String> queue) {
+        return !queue.isEmpty();
     }
 }

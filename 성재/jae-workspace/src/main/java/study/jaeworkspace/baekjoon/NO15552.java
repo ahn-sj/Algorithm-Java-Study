@@ -20,6 +20,6 @@ public class NO15552 {
         br.close();
 
         bw.flush();
-        bw.close();
+        br.close();
     }
 }
