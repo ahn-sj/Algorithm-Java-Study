@@ -6,24 +6,24 @@ Member
 <table>
     <tr height="140px">
         <td align="center" width="130px">
-            <a href="https://github.com/edgar907"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/55921031?v=4"/></a>
+            <a href="https://github.com/upsk1"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/55921031?v=4"/></a>
             <br />
-            <a href="https://github.com/edgar907">upsk1</a>
+            <a href="https://github.com/upsk1">upsk1</a>
         </td>
         <td align="center" width="130px">
-            <a href="https://github.com/LEEHYUNDONG"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/45508756?v=4"/></a>
+            <a href="https://github.com/78planet"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/45508756?v=4"/></a>
             <br />
-            <a href="https://github.com/LEEHYUNDONG">78planet</a>
+            <a href="https://github.com/78planet">78planet</a>
         </td>
         <td align="center" width="130px">
-            <a href="https://github.com/q6801"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/64416833?v=4"/></a>
+            <a href="https://github.com/ahn-sj"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/64416833?v=4"/></a>
             <br />
-            <a href="https://github.com/q6801">ahn-sj</a>
+            <a href="https://github.com/ahn-sj">ahn-sj</a>
         </td>
         <td align="center" width="130px">
-            <a href="https://github.com/jdalma"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/88353130?v=4"/></a>
+            <a href="https://github.com/woals8503"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/88353130?v=4"/></a>
             <br />
-            <a href="https://github.com/jdalma">woals8503</a>
+            <a href="https://github.com/woals8503">woals8503</a>
         </td>
     </tr>
     <tr height="50px">
