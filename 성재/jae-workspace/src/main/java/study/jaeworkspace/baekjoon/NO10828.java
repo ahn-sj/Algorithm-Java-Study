@@ -9,13 +9,13 @@ import java.io.InputStreamReader;
  */
 public class NO10828 {
     public static void main(String[] args) throws IOException {
-        BufferedReader scan = new BufferedReader(new InputStreamReader(System.in));
-        int loopCount = Integer.parseInt(scan.readLine());
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int loopCount = Integer.parseInt(br.readLine());
 
         CustomStack stack = new CustomStack();
 
         for (int i = 0; i < loopCount; i++) {
-            String command = scan.readLine();
+            String command = br.readLine();
             switch (command) {
                 case "pop":
                     System.out.println(stack.pop());
@@ -34,6 +34,7 @@ public class NO10828 {
                     break;
             }
         }
+        br.close();
     }
 
     public static class CustomStack {

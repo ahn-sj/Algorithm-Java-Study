@@ -9,11 +9,11 @@ import java.io.InputStreamReader;
  */
 public class NO9012 {
     public static void main(String[] args) throws IOException {
-        BufferedReader scan = new BufferedReader(new InputStreamReader(System.in));
-        int loopCount = Integer.parseInt(scan.readLine());
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int loopCount = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < loopCount; i++) {
-            String parenthesisString = scan.readLine();
+            String parenthesisString = br.readLine();
 
             for (int j = 0; j <= parenthesisString.length(); j++) {
                 parenthesisString = parenthesisString.replace("()", "");
@@ -21,5 +21,6 @@ public class NO9012 {
             String result = parenthesisString.length() == 0 ? "YES" : "NO";
             System.out.println(result);
         }
+        br.close();
     }
 }
