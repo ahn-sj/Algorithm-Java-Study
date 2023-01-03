@@ -11,23 +11,21 @@ public class NO9012 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        Stack<String> stack = new Stack<>();
-
         int loopCount = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < loopCount; i++) {
             String[] parenthesisStrings = br.readLine().split("");
 
-            stack.clear();
-
-            bw.write(validVPS(stack, parenthesisStrings) + "\n");
+            bw.write(validVPS(parenthesisStrings) + "\n");
             bw.flush();
         }
         bw.close();
         br.close();
     }
 
-    private static String validVPS(Stack<String> stack, String[] parenthesisStrings) {
+    private static String validVPS(String[] parenthesisStrings) {
+        Stack<String> stack = new Stack<>();
+
         for (int j = 0; j < parenthesisStrings.length; j++) {
             if(parenthesisStrings[j].equals("(")) {
                 stack.add("(");
