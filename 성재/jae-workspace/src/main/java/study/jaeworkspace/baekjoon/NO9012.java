@@ -1,26 +1,42 @@
 package study.jaeworkspace.baekjoon;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
+import java.util.Stack;
 
 /**
- * 괄호
+ * 괄호 (스택 활용)
  */
 public class NO9012 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        Stack<String> stack = new Stack<>();
+
         int loopCount = Integer.parseInt(br.readLine());
 
         for (int i = 0; i < loopCount; i++) {
-            String parenthesisString = br.readLine();
+            String[] parenthesisStrings = br.readLine().split("");
 
-            for (int j = 0; j <= parenthesisString.length(); j++) {
-                parenthesisString = parenthesisString.replace("()", "");
-            }
-            String result = parenthesisString.length() == 0 ? "YES" : "NO";
-            System.out.println(result);
+            stack.clear();
+
+            bw.write(validVPS(stack, parenthesisStrings) + "\n");
+            bw.flush();
         }
+        bw.close();
         br.close();
+    }
+
+    private static String validVPS(Stack<String> stack, String[] parenthesisStrings) {
+        for (int j = 0; j < parenthesisStrings.length; j++) {
+            if(parenthesisStrings[j].equals("(")) {
+                stack.add("(");
+            } else if (stack.empty()) { // 스택이 비었으면
+                return "NO"; // NO
+            } else {
+                stack.pop();
+            }
+        }
+        return stack.empty() ? "YES" : "NO";
     }
 }
