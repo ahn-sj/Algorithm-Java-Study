@@ -1,4 +1,4 @@
-package study.jaeworkspace.baekjoon;
+package study.jaeworkspace.baekjoon.w01;
 
 import java.util.ArrayList;
 import java.util.Arrays;

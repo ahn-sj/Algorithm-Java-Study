@@ -1,4 +1,4 @@
-package study.jaeworkspace.baekjoon;
+package study.jaeworkspace.baekjoon.w01;
 
 import java.util.Arrays;
 import java.util.Scanner;

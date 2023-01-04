@@ -1,4 +1,4 @@
-package study.jaeworkspace.baekjoon;
+package study.jaeworkspace.baekjoon.w01;
 
 import java.io.BufferedReader;
 import java.io.IOException;
