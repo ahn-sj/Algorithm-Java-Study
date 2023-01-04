@@ -28,10 +28,10 @@ RE:
 
 ### 02. 자료구조(덱, 스택 응용, 문자열) + dp 맛보기 [리드미](https://github.com/upsk1/AlgorithmJava/blob/main/%EC%84%B1%EC%9E%AC/jae-workspace/src/main/java/study/jaeworkspace/baekjoon/w02/02.%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0(%EB%8D%B1%2C%20%EC%8A%A4%ED%83%9D%20%EC%9D%91%EC%9A%A9%2C%20%EB%AC%B8%EC%9E%90%EC%97%B4)%20%2B%20dp%20%EB%A7%9B%EB%B3%B4%EA%B8%B0.md)
 
-- [ ] [A. 덱](https://www.acmicpc.net/problem/10866)
-- [ ] [B. 네 수](https://www.acmicpc.net/problem/10824)
-- [ ] [C. 알파멧 개수](https://www.acmicpc.net/problem/10808)
-- [ ] [D. 접미사 배열](https://www.acmicpc.net/problem/11656)
+- [x] [A. 덱](https://www.acmicpc.net/problem/10866)
+- [x] [B. 네 수](https://www.acmicpc.net/problem/10824)
+- [x] [C. 알파벳 개수](https://www.acmicpc.net/problem/10808)
+- [x] [D. 접미사 배열](https://www.acmicpc.net/problem/11656)
 - [ ] [E. 에디터](https://www.acmicpc.net/problem/1406)
 - [ ] [F. 1로 만들기](https://www.acmicpc.net/problem/1463)
 - [ ] [G. 타일링](https://www.acmicpc.net/problem/1793)
