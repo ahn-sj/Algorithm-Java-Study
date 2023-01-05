@@ -2,12 +2,11 @@ package study.jaeworkspace.baekjoon.w02;
 
 import java.io.*;
 import java.util.LinkedList;
-import java.util.ListIterator;
 
 /**
- * 에디터
+ * 에디터 (LinkedList)
  */
-public class NO1406 {
+public class NO1406_ {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -18,11 +17,7 @@ public class NO1406 {
         for (Character character : initInputTexts) {
             linkedList.offer(character);
         }
-
-        ListIterator<Character> iterator = linkedList.listIterator();
-        while (iterator.hasNext()) {
-            iterator.next(); // Character 타입의 a b c d를 반환
-        }
+        int index = initInputTexts.length;
 
         int commandLine = Integer.parseInt(br.readLine()); // 3
 
@@ -31,26 +26,29 @@ public class NO1406 {
 
             switch (command[0]) {
                 case "L":
-                    if(iterator.hasPrevious()) iterator.previous();
+                    if(index != 0) index--;
+//                    System.out.println("L: index = " + index);
                     break;
                 case "D":
-                    if(iterator.hasNext()) iterator.next();
+                    if(index != linkedList.size()) index++;
+//                    System.out.println("D: index = " + index);
                     break;
                 case "B":
-                    if(iterator.hasPrevious()) {
-                        iterator.previous();
-                        iterator.remove();
-                    }
+                    if(index != 0) linkedList.remove(index - 1);
+//                    System.out.println(linkedList);
                     break;
                 case "P":
-                    iterator.add(command[1].charAt(0));
+                    linkedList.add(index++, command[1].charAt(0));
                     break;
             }
         }
 
+        String rst = "";
+
         for (Character character : linkedList) {
-            bw.write(character);
+            rst += character;
         }
+        bw.write(rst);
         bw.flush();
 
         bw.close();
