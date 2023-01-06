@@ -19,6 +19,8 @@ public class NO1406 {
             linkedList.offer(character);
         }
 
+        // 인덱스(리터럴) +3 != 이터레이터 (포인터) +1+1+1
+        // LinkedList +3을 해도 결국 O(n)
         ListIterator<Character> iterator = linkedList.listIterator();
         while (iterator.hasNext()) {
             iterator.next(); // Character 타입의 a b c d를 반환
@@ -48,6 +50,10 @@ public class NO1406 {
             }
         }
 
+        // String >> StringBuilder
+        // String            불변
+        // StringBuilder non-불변
+        // => 매번 연산을 해줘서 연산 시간이 발생
         for (Character character : linkedList) {
             bw.write(character);
         }

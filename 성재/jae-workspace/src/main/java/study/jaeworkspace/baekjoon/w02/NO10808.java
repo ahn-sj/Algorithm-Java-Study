@@ -18,10 +18,11 @@ public class NO10808 {
         for (int i = 0; i < word.length(); i++) {
             alphabetCounts[word.charAt(i) - 'a']++;
         }
+
         bw.write(
                 Arrays
                         .toString(alphabetCounts)
-                        .replace(",", "")
+                        .replaceAll(",", "")
                         .substring(1, Arrays.toString(alphabetCounts).length() - 26)
         );
         bw.flush();

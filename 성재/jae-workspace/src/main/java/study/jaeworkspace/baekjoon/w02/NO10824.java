@@ -14,6 +14,7 @@ public class NO10824 {
 
         bw.write((Long.valueOf(naturalNumbers[0] + naturalNumbers[1]) +
                 Long.valueOf(naturalNumbers[2] + naturalNumbers[3])) + "\n");
+        bw.flush();
 
         bw.close();
         br.close();
