@@ -2,6 +2,9 @@ package study.jaeworkspace.baekjoon.w03;
 
 import java.io.*;
 
+/**
+ * 이친수
+ */
 public class NO2193 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
