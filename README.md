@@ -11,11 +11,6 @@ Member
             <a href="https://github.com/upsk1">upsk1</a>
         </td>
         <td align="center" width="130px">
-            <a href="https://github.com/78planet"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/45508756?v=4"/></a>
-            <br />
-            <a href="https://github.com/78planet">78planet</a>
-        </td>
-        <td align="center" width="130px">
             <a href="https://github.com/ahn-sj"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/64416833?v=4"/></a>
             <br />
             <a href="https://github.com/ahn-sj">ahn-sj</a>
@@ -34,12 +29,6 @@ Member
             <br />
             <a href="https://solved.ac/profile/upsk1">solved.ac</a>
         </td>
-        <td align="center">
-            <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=ticksspoiled0c" />
-            <br />
-            <a href="https://www.acmicpc.net/user/ticksspoiled0c">Baekjoon</a>
-            <br />
-            <a href="https://solved.ac/profile/ticksspoiled0c">solved.ac</a>
         </td>
         <td align="center">
             <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=jaesa5221" />
