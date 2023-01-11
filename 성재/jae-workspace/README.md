@@ -42,11 +42,21 @@ stack, queue, deque, linkedlist 메서드 알아두기
 
 ### 03. 동적 계획법(DP, Dynamic Programming) [리드미]()
 
-- [ ] [A. 1,2,3 더하기](https://www.acmicpc.net/problem/9095)
+- [x] [A. 1,2,3 더하기](https://www.acmicpc.net/problem/9095)
 - [ ] [B. 카드 구매하기](https://www.acmicpc.net/problem/11052)
-- [ ] [C. 쉬운 계단 수](https://www.acmicpc.net/problem/10844)
-- [ ] [D. 오르막 수](https://www.acmicpc.net/problem/11057) 
-- [ ] [E. 이친수](https://www.acmicpc.net/problem/2193)
+- [x] [C. 쉬운 계단 수](https://www.acmicpc.net/problem/10844)
+- [x] [D. 오르막 수](https://www.acmicpc.net/problem/11057) 
+- [x] [E. 이친수](https://www.acmicpc.net/problem/2193)
 - [ ] [F. 스티커](https://www.acmicpc.net/problem/9465) 
 - [ ] [G. 포도주 회식](https://www.acmicpc.net/problem/2156) 
 - [ ] [H. 계단 오르기](https://www.acmicpc.net/problem/2579) 
+
+### 04. 수학 정렬
+
+- [ ] [A. 최대공약수와 최소공배수]
+- [ ] [B. 진법 변환 2]
+- [ ] [C. 소수 구하기]
+- [ ] [D. 소인수분해]
+- [ ] [E. 조합 0의 개수]
+- [ ] [F. 국영수]
+- [ ] [G. 버블 소트]
