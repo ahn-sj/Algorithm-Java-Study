@@ -33,13 +33,12 @@ public class NO1929 {
         boolean[] isPrime = new boolean[end + 1];
         Arrays.fill(isPrime, true);
 
-        isPrime3(start, end, isPrime);
+        isPrime3(end, isPrime);
         for (int i = start; i <= end; i++) {
             if(isPrime[i]) {
                 bw.write(i + "\n");
             }
         } // isPrime3() End
-
         bw.flush();
 
         bw.close();
@@ -49,7 +48,7 @@ public class NO1929 {
     /**
      * 시간복잡도 O(N logN) 에라토스테네스의 채
      */
-    private static void isPrime3(int start, int end, boolean[] isPrime) {
+    private static void isPrime3(int end, boolean[] isPrime) {
         isPrime[0] = isPrime[1] = false;
         for (int i = 2; i * i <= end; i++) {
             if(isPrime[i]) {
