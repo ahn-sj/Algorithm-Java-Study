@@ -18,7 +18,6 @@ public class Foo {
                 new Point(5,2),
                 new Point(3,2));
 
-        // case: x를 내림차순 하되, x의 값이 중복되면 y의 값은 오름차순 정렬
         Comparator<Point> XComparator = new Comparator<Point>() {
             @Override
             public int compare(Point point1, Point point2) {
@@ -33,13 +32,27 @@ public class Foo {
             }
         };
 
+        // x: 내림차순
         Collections.sort(points, XComparator);
+        // y: 올림차순
         Collections.sort(points, YComparator);
 
         for (Point point : points) {
             System.out.println("point = " + point);
         }
+        /**
+         * 실행결과
+         * point = Point{x=1, y=2}
+         * point = Point{x=2, y=6}
+         * point = Point{x=2, y=2}
+         * point = Point{x=3, y=5}
+         * point = Point{x=3, y=2}
+         * point = Point{x=5, y=3}
+         * point = Point{x=5, y=2}
+         * point = Point{x=6, y=7}
+         */
     }
+
     static class Point {
         private int x;
         private int y;
@@ -65,5 +78,4 @@ public class Foo {
             return y;
         }
     }
-
 }
