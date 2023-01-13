@@ -1,10 +1,14 @@
 package study.jaeworkspace.baekjoon.w04;
 
 import java.io.*;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+/**
+ * 국영수
+ */
 public class NO10825 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -39,11 +43,13 @@ public class NO10825 {
     }
 
     static class Student implements Comparable<Student> {
-
         private String name;
         private int ko;
         private int en;
         private int math;
+
+        // Point x, y x기준 정렬, y기준 정렬
+
 
         public Student(String name, int ko, int en, int math) {
             this.name = name;
@@ -59,13 +65,11 @@ public class NO10825 {
                     if(math == student.math) { // 국어, 영어, 수학 점수가 같은가
                         return name.compareTo(student.name);
                     }
-                    return student.math - math;
+                    return student.math - math; // 국어와 영어 점수가 같으면 수학 점수 내림차순
                 }
-                return en - student.en;
+                return en - student.en; // 국어 점수가 같으면 영어 점수 오름차순
             }
-            return student.ko - ko;
+            return student.ko - ko; // 국어 점수 = 내림차순
         }
     }
-
 }
-

@@ -21,7 +21,7 @@ public class NO11653 {
             } else { // 인수분해가 안되면 2 -> 3 -> ...
                 factor++;
             }
-        }
+        } // 시간 제한 있을 시 for문으로 루트 n까지
         bw.flush();
 
         bw.close();

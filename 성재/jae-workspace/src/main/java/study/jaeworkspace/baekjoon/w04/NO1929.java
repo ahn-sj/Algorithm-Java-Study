@@ -20,7 +20,7 @@ public class NO1929 {
          * isPrime(), isPrime2()
          */
 //        for (int i = start; i <= end; i++) {
-//            if(isPrime3(i)) {
+//            if(isPrime2(i)) {
 //                bw.write(i + "\n");
 //            }
 //        } // isPrime(), isPrime2() End

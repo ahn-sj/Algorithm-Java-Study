@@ -15,8 +15,9 @@ public class NO2609 {
         int left = Integer.parseInt(st.nextToken());
         int right = Integer.parseInt(st.nextToken());
 
-        int gcd = gcd(left, right);
-        bw.write(gcd + "\n" + ((left * right) / gcd));
+        int gcd = gcd(left, right);     // 최대 공약수
+        int lcm = (left * right) / gcd; // 최소 공배수
+        bw.write(gcd + "\n" + lcm);
         bw.flush();
 
         br.close();
@@ -24,10 +25,6 @@ public class NO2609 {
     }
 
     private static int gcd(int left, int right) {
-        if(left % right == 0) {
-            return right;
-        }
-
-        return gcd(right, left % right);
+        return left % right == 0 ? right : gcd(right, left % right);
     }
 }
