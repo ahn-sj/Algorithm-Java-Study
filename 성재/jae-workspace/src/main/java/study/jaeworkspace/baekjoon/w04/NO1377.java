@@ -3,9 +3,6 @@ package study.jaeworkspace.baekjoon.w04;
 import java.io.*;
 import java.util.Arrays;
 
-/**
- * 버블 소트
- */
 public class NO1377 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -13,27 +10,47 @@ public class NO1377 {
 
         int size = Integer.parseInt(br.readLine());
 
-        boolean isFlag;
-        int[] ints = new int[size + 1];
+        Pair[] pairs = new Pair[size + 1];
 
-        for (int i = 1; i < ints.length; i++) {
-            ints[i] = Integer.parseInt(br.readLine());
+        final int START = 1;
+        final int END = pairs.length;
+
+        for (int i = START; i < END; i++) {
+            int value = Integer.parseInt(br.readLine());
+            pairs[i] = new Pair(i, value);
         }
-        for (int i = 1; i < ints.length; i++) {
-            isFlag = false;
-            for (int j = 1; j < ints.length - i; j++) {
-                if(ints[j] > ints[j + 1]) {
-                    isFlag = true;
+        Arrays.sort(pairs, START, END);
+        // [null, study.jaeworkspace.baekjoon.w04.NO1377$Pair@735f7ae5, ... ]
+        // 0번째 인덱스의 값이 null 이라 NPE 발생해서 시작 인덱스를 1로 해주어야 함
 
-                    int temp = ints[j];
-                    ints[j] = ints[j + 1];
-                    ints[j + 1] = temp;
-                }
+        int max = 0;
+        // 정렬전 index - 정렬후 index
+        for (int i = START; i < END; i++) {
+            int key = pairs[i].key;
+
+            if(max < key - i) {
+                max = key - i;
             }
-            if(!isFlag) {
-                bw.write(i + "\n");
-                break;
-            }
+        }
+        bw.write((max + 1) + "");
+        bw.flush();
+
+        bw.close();
+        br.close();
+    }
+
+    static class Pair implements Comparable<Pair> {
+        private int key;
+        private int value;
+
+        public Pair(int key, int value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        @Override
+        public int compareTo(Pair pair) { // value 기준 오름차순 정렬
+            return value - pair.value;
         }
     }
 }
