@@ -5,6 +5,10 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * 다중 정렬 조건
+ * 참고: https://live-everyday.tistory.com/135
+ */
 public class Foo {
     public static void main(String[] args) {
 
