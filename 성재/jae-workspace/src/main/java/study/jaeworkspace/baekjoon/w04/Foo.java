@@ -46,14 +46,14 @@ public class Foo {
         }
         /**
          * 실행결과
-         * point = Point{x=1, y=2}
-         * point = Point{x=2, y=6}
-         * point = Point{x=2, y=2}
-         * point = Point{x=3, y=5}
-         * point = Point{x=3, y=2}
-         * point = Point{x=5, y=3}
-         * point = Point{x=5, y=2}
          * point = Point{x=6, y=7}
+         * point = Point{x=2, y=6}
+         * point = Point{x=3, y=5}
+         * point = Point{x=5, y=3}
+         * point = Point{x=1, y=2}
+         * point = Point{x=2, y=2}
+         * point = Point{x=3, y=2}
+         * point = Point{x=5, y=2}
          */
     }
 

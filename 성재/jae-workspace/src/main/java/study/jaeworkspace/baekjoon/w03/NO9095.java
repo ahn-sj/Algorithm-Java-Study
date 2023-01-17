@@ -1,7 +1,6 @@
 package study.jaeworkspace.baekjoon.w03;
 
 import java.io.*;
-import java.util.Arrays;
 
 /**
  * 1, 2, 3 더하기
@@ -11,19 +10,18 @@ public class NO9095 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int testCase = Integer.parseInt(br.readLine());
+        int[] dy = new int[11];
+        dy[1] = 1;
+        dy[2] = 2;
+        dy[3] = 4;
 
-        int[] addWays = new int[11];
-        addWays[1] = 1;
-        addWays[2] = 2;
-        addWays[3] = 4;
-
-        for (int i = 4; i < addWays.length; i++) {
-            addWays[i] = addWays[i - 1] + addWays[i - 2] + addWays[i - 3];
+        for (int i = 4; i < dy.length; i++) {
+            dy[i] = dy[i - 1] + dy[i - 2] + dy[i - 3];
         }
-        for (int i = 0; i < testCase; i++) {
-            int integer = Integer.parseInt(br.readLine());
-            bw.write(addWays[integer] + "\n");
+
+        int loop = Integer.parseInt(br.readLine());
+        for (int i = 0; i < loop; i++) {
+            bw.write(dy[Integer.parseInt(br.readLine())] + "\n");
         }
         bw.flush();
 
