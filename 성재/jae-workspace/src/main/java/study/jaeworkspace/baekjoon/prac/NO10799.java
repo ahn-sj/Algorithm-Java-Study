@@ -1,4 +1,4 @@
-package study.jaeworkspace.baekjoon.w05;
+package study.jaeworkspace.baekjoon.prac;
 
 import java.io.*;
 import java.util.Stack;
