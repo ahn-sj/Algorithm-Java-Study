@@ -1,18 +1,13 @@
 package study.jaeworkspace.baekjoon.w05;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.StringTokenizer;
+import java.awt.*;
+import java.io.*;
+import java.util.*;
 
 /**
  * 섬의 개수
  */
 public class NO4963 {
-
     static int dx[] = {0, -1, 0, 1, 1, 1, -1, -1};
     static int dy[] = {1, 0, -1, 0, 1, -1, -1, 1};
 
@@ -46,51 +41,51 @@ public class NO4963 {
                     map[i][j] = Integer.parseInt(st.nextToken());
                 }
             }
-            System.out.println(Arrays.deepToString(map));
 
             int island = 0;
             for (int i = 0; i < height; i++) {
                 for (int j = 0; j < width; j++) {
-                    if(!checked[i][j] && map[i][j] == 1) {
+                    if(isChecked(i, j)) {
                         bfs(i, j);
                         island++;
                     }
                 }
             }
+            sb.append(island).append("\n");
         }
+        System.out.println(sb);
         br.close();
     }
 
     private static void bfs(int x, int y) {
-        Queue<Node> queue = new LinkedList<>();
+        Queue<Point> queue = new LinkedList<>();
         checked[x][y] = true;
-        queue.offer(new Node(x, y));
+        queue.offer(new Point(x, y));
 
         while (hasElement(queue)) {
-            Node node = queue.poll();
+            Point point = queue.poll();
 
             for (int i = 0; i < dx.length; i++) {
-                int curX = dx[i] + node.x;
-                int curY = dy[i] + node.y;
+                int curX = dx[i] + point.x;
+                int curY = dy[i] + point.y;
 
-//                if(curY >= 0 &)
-
-
+                if(isValidRange(curX, curY) && isChecked(curX, curY)) {
+                    queue.add(new Point(curX, curY));
+                    checked[curX][curY] = true;
+                }
             }
         }
     }
 
-    private static boolean hasElement(Queue<Node> queue) {
-        return !queue.isEmpty();
+    private static boolean isChecked(int x, int y) {
+        return !checked[x][y] && map[x][y] == 1;
     }
 
-    private static class Node {
-        private int x;
-        private int y;
+    private static boolean isValidRange(int curX, int curY) {
+        return curX >= 0 && curY >= 0 && curX < height && curY < width;
+    }
 
-        public Node(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
+    private static boolean hasElement(Queue<Point> queue) {
+        return !queue.isEmpty();
     }
 }

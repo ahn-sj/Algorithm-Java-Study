@@ -54,17 +54,13 @@ public class NO2667 {
         System.out.println(sb.toString());
     }
 
-    private static boolean isChecked(int i, int j) {
-        return !checked[i][j] && map[i][j] == 1;
-    }
-
     private static void bfs(int x, int y) {
 //        Queue<int[]> queue = new LinkedList<>();
 //        queue.offer(new int[]{x, y});
         Queue<Point> queue = new LinkedList<>();
         queue.offer(new Point(x, y));
         checked[x][y] = true;
-        
+
         while (hasElement(queue)) {
             Point point = queue.poll();
 
@@ -79,6 +75,10 @@ public class NO2667 {
                 }
             }
         }
+    }
+
+    private static boolean isChecked(int i, int j) {
+        return !checked[i][j] && map[i][j] == 1;
     }
 
     private static boolean isValidRange(int curX, int curY) {
