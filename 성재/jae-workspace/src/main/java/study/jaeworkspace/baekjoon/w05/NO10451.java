@@ -45,6 +45,8 @@ public class NO10451 {
 //            printMatrix();
         }
         System.out.println(sb);
+
+        br.close();
     }
 
     private static void bfs(int start) {
