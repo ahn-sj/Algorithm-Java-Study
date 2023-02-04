@@ -44,6 +44,13 @@ Member
             <br />
             <a href="https://solved.ac/profile/woals8503">solved.ac</a>
         </td>
+        <td align="center">
+            <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=wlsrb7577" />
+            <br />
+            <a href="https://www.acmicpc.net/user/wlsrb7577">Baekjoon</a>
+            <br />
+            <a href="https://solved.ac/profile/wlsrb7577">solved.ac</a>
+        </td>
     </tr>
 </table>
 
