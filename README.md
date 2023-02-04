@@ -20,6 +20,11 @@ Member
             <br />
             <a href="https://github.com/woals8503">woals8503</a>
         </td>
+        <td align="center" width="130px">
+            <a href="https://github.com/wlsrb7577"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/55921031?v=4"/></a>
+            <br />
+            <a href="https://github.com/wlsrb7577">wlsrb7577</a>
+        </td>
     </tr>
     <tr height="50px">
         <td align="center">
