@@ -8,8 +8,8 @@ import java.util.*;
 import java.util.List;
 
 public class NO2667 {
-    static int dx[] = {0, 0, 1, -1};
-    static int dy[] = {1, -1, 0, 0};
+    static int dx[] = {0, 1, 0, -1};
+    static int dy[] = {1, 0, -1, 0};
 
     static int map[][];
     static boolean[][] checked;
@@ -77,12 +77,12 @@ public class NO2667 {
         }
     }
 
-    private static boolean isChecked(int i, int j) {
-        return !checked[i][j] && map[i][j] == 1;
-    }
-
     private static boolean isValidRange(int curX, int curY) {
         return curX >= 0 && curY >= 0 && curX < mapSize && curY < mapSize;
+    }
+
+    private static boolean isChecked(int i, int j) {
+        return !checked[i][j] && map[i][j] == 1;
     }
 
     private static boolean hasElement(Queue<Point> queue) {

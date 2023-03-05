@@ -21,8 +21,6 @@ public class NO11725 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-
-
         node = Integer.parseInt(st.nextToken());
         parents = new int[node + 1];
 
