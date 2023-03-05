@@ -20,6 +20,11 @@ Member
             <br />
             <a href="https://github.com/woals8503">woals8503</a>
         </td>
+        <td align="center" width="130px">
+            <a href="https://github.com/Jindoryy"><img height="100px" width="100px" src="https://avatars.githubusercontent.com/u/55921031?v=4"/></a>
+            <br />
+            <a href="https://github.com/Jindoryy">Jindoryy</a>
+        </td>
     </tr>
     <tr height="50px">
         <td align="center">
@@ -44,12 +49,19 @@ Member
             <br />
             <a href="https://solved.ac/profile/woals8503">solved.ac</a>
         </td>
+        <td align="center">
+            <img src="http://mazassumnida.wtf/api/mini/generate_badge?boj=wlsrb7577" />
+            <br />
+            <a href="https://www.acmicpc.net/user/wlsrb7577">Baekjoon</a>
+            <br />
+            <a href="https://solved.ac/profile/wlsrb7577">solved.ac</a>
+        </td>
     </tr>
 </table>
 
 When
 ----------
-매주 화,금 오후 3시
+매주 금 오후 8시
 
 
 How
